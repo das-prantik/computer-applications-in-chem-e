@@ -1,11 +1,4 @@
 function [Cs, ts] = rk4(f, C_0, times) %#ok<FNDEF>
-    % @parameter f: function for RK-4 to solve
-    % @parameter C_0: initial condition
-    % @parameter times: time range and step size
-
-    % @return Cs: array of solution values
-    % @return ts: array of time points
-
     step = times(3);
     ts = (times(1):step:times(2))';
     Cs = zeros(length(ts), 1);
