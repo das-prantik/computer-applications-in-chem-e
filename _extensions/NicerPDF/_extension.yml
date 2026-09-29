@@ -7,7 +7,6 @@ contributes:
       toc: true
       code-fold: false
     pdf:
-      toc: true
       include-in-header:
         - "NicerPDF.tex"
   jupyter: python3

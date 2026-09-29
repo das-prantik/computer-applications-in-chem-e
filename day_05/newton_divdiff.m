@@ -6,9 +6,12 @@ function [P_sym, P_fun, coeffs] = ...
 
     for j = 2:n
         for i = 1:n-j+1
-            F(i, j) = (F(i+1, j-1) - F(i, j-1)) / (x_data(i+j-1) - x_data(i));
+            F(i, j) = ...
+            (F(i+1, j-1) - F(i, j-1)) / (x_data(i+j-1) - x_data(i));
         end
     end
+
+    disp(F);
 
     coeffs = F(1, :);
 
